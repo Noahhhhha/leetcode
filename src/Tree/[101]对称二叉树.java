@@ -37,9 +37,12 @@ package Tree;//给定一个二叉树，检查它是否是镜像对称的。
  */
 class Solution {
     public boolean isSymmetric(TreeNode root) {
-        // 创立一个新的树为自身镜像
-        // 此处若写isSymmetric(root.left, root.right)则比较次数减少一倍，能执行，但提交报错
-        return isSymmetric(root, root);
+        // 一直进行左右比对
+        if (root == null){
+            return true;
+        }
+        // 此处如果传入的是root，root。比对次数会增加一倍
+        return isSymmetric(root.left, root.right);
     }
     private boolean isSymmetric(TreeNode root,TreeNode root2){
         if (root == null || root2 == null){
