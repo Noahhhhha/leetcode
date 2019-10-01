@@ -35,7 +35,7 @@ package Tree;//给定一个二叉树，返回其节点值自底向上的层次�
 class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         if (root == null){
-            return new List<List<Integer>>();
+            return new LinkedList<>();
         }
         List<List<Integer>> list = new LinkedList<>(); // 最终提交的东西
         List<Integer> intList = null; // 树中每一行的节点数组
