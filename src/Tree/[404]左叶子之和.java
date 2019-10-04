@@ -39,4 +39,19 @@ class Solution {
     }
 }
 
+// 将sum提到外面去也行
+class Solution {
+    int sum = 0;
+    public int sumOfLeftLeaves(TreeNode root) {
+        if (root == null) return 0; // 当前节点为null时
+        /**
+         * 想判断一个点是不是左叶子节点，只能从其父辈判断
+         */
+        if (root.left != null && root.left.left == null && root.left.right == null) sum += root.left.val;
+        sumOfLeftLeaves(root.left);
+        sumOfLeftLeaves(root.right);
+        return sum; // 最终需要将场外变量sum返回
+    }
+}
+
 //leetcode submit region end(Prohibit modification and deletion)
