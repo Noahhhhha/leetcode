@@ -42,6 +42,7 @@ class Solution {
     public int pathSum(TreeNode root, int sum) {
         /**
          * 这道题要用双递归，要让每个节点都重新来过
+         * 用一个递归终究还是不行的，sum终究被污染
          */
         if (root == null) return 0;
         return helper(root, sum) + pathSum(root.left,sum) + pathSum(root.right,sum);
@@ -50,11 +51,9 @@ class Solution {
     private int helper(TreeNode root,int sum){
         if (root == null) return 0;
         /**
-         * 这里要让sum跟root.val对比，而不是0
-         * 要考虑当前节点是不是终结点，如果节点值与sum值相同，自身一个点就是一个路径
+         * sum == root.val 等价于 0 == sum - root.val
          */
         return (sum == root.val ? 1 : 0) + helper(root.left, sum-root.val) + helper(root.right, sum-root.val);
     }
-
 }
 //leetcode submit region end(Prohibit modification and deletion)
