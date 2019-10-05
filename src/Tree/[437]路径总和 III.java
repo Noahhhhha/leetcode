@@ -41,7 +41,7 @@ package Tree;//给定一个二叉树，它的每个结点都存放着一个整�
 class Solution {
     public int pathSum(TreeNode root, int sum) {
         /**
-         * 这道题要用双递归，要让每个节点都重新来过
+         * 这道题要用双层递归，要让每个节点都重新来过
          * 用一个递归终究还是不行的，sum终究被污染
          */
         if (root == null) return 0;
