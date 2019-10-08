@@ -1,4 +1,4 @@
-package Tree;//计算给定二叉树的所有左叶子之和。[by 导包侠]
+package tree;//计算给定二叉树的所有左叶子之和。[by 导包侠]
 //
 // 示例： 
 //
@@ -39,18 +39,25 @@ class Solution {
     }
 }
 
-// 将sum提到外面去也行
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 class Solution {
-    int sum = 0;
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) return 0; // 当前节点为null时
+        int sum = 0;
         /**
          * 想判断一个点是不是左叶子节点，只能从其父辈判断
+         * 当判断特殊情况的时候，这个特殊情况包含在普通情况之中，就考虑用一个场外值sum来解决吧
          */
         if (root.left != null && root.left.left == null && root.left.right == null) sum += root.left.val;
-        sumOfLeftLeaves(root.left);
-        sumOfLeftLeaves(root.right);
-        return sum; // 最终需要将场外变量sum返回
+        return sum + sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
     }
 }
 

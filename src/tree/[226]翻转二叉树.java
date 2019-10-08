@@ -1,4 +1,4 @@
-package Tree;//翻转一棵二叉树。
+package tree;//翻转一棵二叉树。
 //[by 导包侠]
 // 示例： 
 //
