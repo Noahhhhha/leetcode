@@ -23,6 +23,9 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int rob(int[] nums) {
+        /**
+         * 打家劫舍三部曲：198（单列表）、213（循环列表）、337（树）
+         */
         int preMax = 0; // n - 2 的位置
         int curMax = 0;
         for(int n : nums){
