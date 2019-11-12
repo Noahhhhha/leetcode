@@ -24,3 +24,4 @@ java语言实现leetcode中的一些题，数据结构的一些基本知识也�
    - **bst**                     `二叉搜索树性质应用`
    - **depth**                   `二叉树深度问题`
    - **doubleRecursion**         `树双递归问题`
+   - **traversal**         `遍历`
