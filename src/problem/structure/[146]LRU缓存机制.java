@@ -29,7 +29,7 @@
 
 /**
  * 最近最少使用缓存机制
- * 需要用到一个HashMap和LinkedList双向链表(这次我自制了一个)，类似于LinkHashMap的底层实现
+ * 需要用到一个HashMap和LinkedList双向链表(这次我自制了一个)，类似于 LinkHashMap 的底层实现
  * HashMap中存着LikedListNode，也就是存有链表的每个节点，然后每个节点再前后互相指着
  * 新put进去的和get得到的 都需要删除掉，再重新绑定到LinkedList的头指针后面
  * 所以排在双向链表最后面的就是最不常用的，当size超标了以后，直接删除最后面的指针就可以了
