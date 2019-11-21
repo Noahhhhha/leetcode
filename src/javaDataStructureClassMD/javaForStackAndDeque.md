@@ -1,3 +1,4 @@
+```
 java中不推荐使用Stack类来实现栈，因为Stack类是用Vector实现的，效率不高
 建议使用Deque接口
 Deque是Queue的子接口，双端队列。
@@ -5,3 +6,4 @@ Deque有两个比较重要的类：ArrayDeque和LinkedList
 建议使用栈时，用ArrayDeque的push和pop方法；
 使用队列时，使用ArrayDeque的add和remove方法。
 不过我一般使用LinkedList
+```
