@@ -1,21 +1,5 @@
-//给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数。 
-//
-// 示例 1: 
-//
-// 输入: [10,2]
-//输出: 210 
-//
-// 示例 2: 
-//
-// 输入: [3,30,34,5,9]
-//输出: 9534330 
-//
-// 说明: 输出结果可能非常大，所以你需要返回一个字符串而不是整数。 
-// Related Topics 排序
-
-
-
-//leetcode submit region begin(Prohibit modification and deletion)
+179最大数中
+```java
 class Solution {
     public String largestNumber(int[] nums) {
         /**
@@ -31,4 +15,10 @@ class Solution {
         return sb.charAt(0) == '0' ? "0" : sb.toString();
     }
 }
-//leetcode submit region end(Prohibit modification and deletion)
+```
+
+630课程表中Arrays.sort()和Priority的构造函数也能直接传lamda
+```java
+Arrays.sort(courses, (a, b) -> a[1] - b[1]); // 限制时间从小到大
+PriorityQueue<Integer> pqueue = new PriorityQueue<>((a, b) -> b - a); // 花费时间从大到小
+```
