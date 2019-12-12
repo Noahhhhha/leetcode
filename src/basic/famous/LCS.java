@@ -17,16 +17,14 @@ public class LCS {
         int len1 = str1.length;
         int len2 = str2.length;
 
-        int[][] array = new int[len1 + 1][len2 + 1];
-        // 绘制一个表格 len1 * len2 , 表格右下角的值就为LCS的长度
+        int[][] array = new int[len1 + 1][len2 + 1]; // 绘制一个表格 len1 * len2 , 表格右下角的值就为LCS的长度
+            // 第一句 字符 匹配第二句 字符，如果两个相同，就将左上方的数加1
+            // 不相等，值为 左方 或 上方 值大的那一个
         for (int i = 1; i <= len1; i++) { // 行为str1
             for (int j = 1; j <= len2; j++) { // 列为str2
-                if (str1[i - 1] == str2[j - 1]) { // 第一句 字符 匹配第二句 字符，如果两个相同，就将左上方的数加1
-                    char index = str1[i-1];
-                    char index2 = str2[j - 1];
+                if (str1[i - 1] == str2[j - 1]) {
                     array[i][j] = array[i - 1][j - 1] + 1;
-                } else { // 不相等，值为 左方 或 上方 值大的那一个
-                    // 当其不相等的时候，再往下循环的同时，我们要保证最长”公共子序列要建立在之前的最长公共子序列中，因为要追求最长。
+                } else { // 当其不相等的时候，再往下循环的同时，我们要保证最长”公共子序列要建立在之前的最长公共子序列中，因为要追求最长。
                     array[i][j] = Math.max(array[i - 1][j], array[i][j - 1]);
                 }
             }
@@ -51,7 +49,7 @@ public class LCS {
                 lcsSequence = str1[i - 1] + lcsSequence;
                 i--;
                 j--;
-            } else if (array[i - 1][j] >= array[i][j - 1]) { // 左边的值大于上边的值，就往左走，反之，往上走
+            } else if (array[i - 1][j] >= array[i][j - 1]) { // 上边的值大于左边的值，就往上走，反之，往左走
                 i--;
             } else {
                 j--;

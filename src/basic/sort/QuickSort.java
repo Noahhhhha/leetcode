@@ -19,9 +19,7 @@ public class QuickSort {
     }
 
     public static void quickSort(int[] arr) {
-        int start = 0;
-        int end = arr.length - 1;
-        quickSort(arr,start,end);
+        quickSort(arr,0,arr.length - 1);
     }
 
     private static void quickSort(int[] arr, int start, int end) {
