@@ -1,14 +1,16 @@
 # leetcode
 java语言实现leetcode中的一些题，数据结构的一些基本知识也在往这上面总结。:turtle:
 ## src
+- **algorithm** `算法总结`
 - **basic** `写一些基础的算法，如快排`
    - **famous** `著名的一些算法`
       - **LCS** `最长公共子序列`
    - **graph** `图`
    - **sort** `排序`
    - **test** `一些测试代码`
-- **javaDataStructureClassMD** `java中的数据结构实现笔记`
-- **javaInformationHandleException** `java中的数据处理语法的一些例子题`
+- **java** `有关java的语法`
+    - **dataStructure** `java中的数据结构笔记`
+    - **api** `java中常用的api`
 - **problem** `真正的题`
     - **array** `数组`   
     - **backtracking** `回溯算法`   

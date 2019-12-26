@@ -1,11 +1,12 @@
+列表转数组需要写上数组的大小
 ```
-[500键盘行]
+// [500键盘行]
 List<String> l = new ArrayList<>();
     ...
 l.toArray(new String[l.size()]); 
 ```
 ```java
-    // 二维数组的转换 - 56题 - 合并区间
+// 二维数组的转换 - 56题 - 合并区间
 public int[][] merge(int[][] intervals) {
 List<int[]> res = new ArrayList<>();
 if (intervals == null || intervals.length == 0)
