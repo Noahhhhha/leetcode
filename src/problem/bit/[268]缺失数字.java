@@ -25,7 +25,7 @@
  */
 class Solution {
     public int missingNumber(int[] nums) {
-        // 这道题对时间复杂度有要求，为线性，所以不做排序了，除了hash表以外，还可以做位运算异或，异或满足交换律，所以最后生下来的一定是单独的那一个数
+        // 这道题对时间复杂度有要求，为线性，所以不做排序了，除了hash表以外，还可以做位运算异或，异或满足交换律，所以最后剩下来的一定是单独的那一个数
         // 这道题还可以用高斯求和公式，减去nums中的数，剩下的就是missing
         int missing = nums.length;
         for(int i = 0; i < nums.length; i++){

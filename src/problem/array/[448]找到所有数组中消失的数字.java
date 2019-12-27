@@ -19,7 +19,7 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
-
+        // 此题鸽巢原理，每只鸽子到自己该到的巢
         int size = nums.length;
 
         List<Integer> res = new ArrayList<>();
@@ -32,6 +32,7 @@ class Solution {
             }
         }
 
+        // 检查，如果不在自己该在的巢里，这巢里就不是正确的数，就是少的那个数
         for (int i = 0; i < size; i++){
             if (nums[i] != i + 1)
                 res.add(i + 1);
