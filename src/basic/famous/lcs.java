@@ -4,7 +4,7 @@ package famous;
  * Created by Noahhhhha
  * on 2019/11/4 17:57.
  */
-public class LCS {
+public class lcs {
     public static void main(String[] args) {
         /**
          * 参考文章链接：https://blog.csdn.net/weixin_40673608/article/details/84262695
