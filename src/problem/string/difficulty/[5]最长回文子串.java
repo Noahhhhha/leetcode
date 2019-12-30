@@ -17,6 +17,7 @@
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+    // 这道题的难点在于 +1 和 -1 的细节问题
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         // 中心扩展算法
